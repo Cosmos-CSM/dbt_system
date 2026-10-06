@@ -9,7 +9,7 @@ using CSM_System_Database_Core.Entities;
 namespace CSM_System_Database_Core.Depots;
 
 /// <inheritdoc cref="IConfigurationsDepot"/>
-public class ConfigurationDepot
+public class ConfigurationsDepot
     : DepotBase<SystemDatabase, Configuration>, IConfigurationsDepot {
 
     /// <summary>
@@ -21,7 +21,7 @@ public class ConfigurationDepot
     /// <param name="Disposer">
     ///     Data disposition context manager.
     /// </param>
-    public ConfigurationDepot(SystemDatabase Database, IDisposer<IEntity>? Disposer)
+    public ConfigurationsDepot(SystemDatabase Database, IDisposer<IEntity>? Disposer)
         : base(Database, Disposer) {
     }
 }

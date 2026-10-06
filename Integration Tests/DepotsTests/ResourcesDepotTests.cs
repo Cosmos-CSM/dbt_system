@@ -1,12 +1,9 @@
-﻿using CSharp_Extension.Common.Utils;
-
-using CSM_Database_Core.Depots.Models;
+﻿using CSM_Database_Core.Depots.Models;
 
 using CSM_System_Database_Core.Depots;
 using CSM_System_Database_Core.Entities;
 
 using CSM_System_Database_Testing.Abstractions.Bases;
-using CSM_System_Database_Testing.Managers;
 using CSM_System_Database_Testing.Utils;
 
 namespace Integration_Tests.DepotsTests;
@@ -18,14 +15,12 @@ public class ResourcesDepotTests
     : SystemDepotIntegrationTestsBase<Resource, ResourcesDepot> {
 
     protected override Resource EntityFactory(string entropy) {
-        ;
         return DraftUtils.Resource(
             new Resource {
                 Name = $"Resource_{entropy}",
                 Description = $"Description_{entropy}",
                 Local = $"Local_{entropy}",
-                External = $"External_{entropy}",
-                Type = _storeManager.StoreAsset().Result,
+                Type = _storeManager.StoreAsset().GetAwaiter().GetResult(),
             }
         );
     }
@@ -60,7 +55,7 @@ public class ResourcesDepotTests
         Assert.NotEqual(actOutput.Original.Description, actOutput.Updated.Description);
         Assert.NotEqual(actOutput.Original.Local, actOutput.Updated.Local);
         Assert.NotEqual(ogResource?.Type.Id, newResource.Type.Id);
-       
+
 
     }
 }

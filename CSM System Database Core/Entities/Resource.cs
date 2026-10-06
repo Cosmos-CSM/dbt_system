@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CSM_System_Database_Core.Entities;
 /// <summary>
-///     Represesnts a local or external resource within the system database.
+///     Represents  a local or external resource within the system database.
 /// </summary>
 public class Resource :
     SystemNamedEntityBase {

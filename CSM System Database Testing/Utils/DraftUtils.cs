@@ -45,7 +45,7 @@ static public class DraftUtils
     static public Resource Resource(Resource? @ref = null) {
         @ref = BaseDraftUtils.NamedEntity(@ref);
         @ref.Local = @ref.Local ?? "local@" + Epy;
-        @ref.Type = @ref.Type;
+        @ref.Type ??= Asset();
         return @ref;
     }
 

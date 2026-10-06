@@ -9,10 +9,10 @@ using CSM_System_Database_Testing.Utils;
 namespace Integration_Tests.DepotsTests;
 
 /// <summary>
-///     Integration tests class for <see cref="AssetsDepot"/>
+///     Integration tests class for <see cref="ConfigurationsDepot"/>
 /// </summary>
 public class ConfigurationsDepotTests
-    : SystemDepotIntegrationTestsBase<Configuration, ConfigurationDepot> {
+    : SystemDepotIntegrationTestsBase<Configuration, ConfigurationsDepot> {
 
     protected override Configuration EntityFactory(string entropy) {
         return DraftUtils.Configuration();
