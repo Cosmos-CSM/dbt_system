@@ -13,6 +13,7 @@
 
 | Package                                 | Previous Version | New Version     |
 |:----------------------------------------|:----------------:|:---------------:|
+| CSharp.Extension                        | -.-.-            | 1.2.5           |
 | CSM.Database.Core                       | 7.0.0            | 7.0.0           |
 | Microsoft.EntityFrameworkCore.Design	  | 10.0.10          | 10.0.10         |
 	
