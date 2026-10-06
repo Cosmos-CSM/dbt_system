@@ -30,4 +30,39 @@ public class StoreManager {
         EntityState entityState = DraftUtils.EntityState(@ref);
         return await _storeManager.Store(entityState);
     }
+
+    /// <summary>
+    /// Create and store a new <see cref="Asset"/> entity in the database.
+    /// </summary>
+    /// <param name="ref"></param>
+    /// <returns></returns>
+    public async Task<Asset> StoreAsset(Asset? @ref = null) {
+        Asset asset = DraftUtils.Asset(@ref);
+        return await _storeManager.Store(asset);
+    }
+
+    /// <summary>
+    /// Create and store a new <see cref="Resource"/> entity in the database.
+    /// </summary>
+    /// <param name="ref"></param>
+    /// <returns></returns>
+    public async Task<Resource> StoreResource(Resource? @ref = null) {
+        Resource resource = DraftUtils.Resource(@ref);
+
+        if (resource.Type == null || resource.Type?.Id <= 0) {
+            resource.Type = await StoreAsset(resource.Type);
+        }
+
+        return await _storeManager.Store(resource);
+    }
+    /// <summary>
+    /// Create and store a new <see cref="Configuration"/> entity in the database.
+    /// </summary>
+    /// <param name="ref"></param>
+    /// <returns></returns>
+    public async Task<Configuration> StoreConfiguration(Configuration? @ref = null) {
+        Configuration resource = DraftUtils.Configuration(@ref);
+        return await _storeManager.Store(resource);
+    }
+
 }

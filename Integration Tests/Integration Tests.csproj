@@ -26,10 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DepotsTests\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CSM System Database Testing\CSM System Database Testing.csproj" />
   </ItemGroup>
 

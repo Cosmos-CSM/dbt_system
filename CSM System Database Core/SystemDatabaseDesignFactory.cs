@@ -1,4 +1,6 @@
-﻿using CSM_Foundation_Core.Core.Utils;
+﻿
+using CSharp_Extension.Common.Utils;
+
 using Microsoft.EntityFrameworkCore.Design;
 
 namespace CSM_System_Database_Core;
@@ -21,5 +23,5 @@ internal class SystemDatabaseDesignFactory
 
         return new SystemDatabase();
     }
-   
+
 }

@@ -4,6 +4,7 @@ using CSM_System_Database_Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CSM_System_Database_Core.Migrations
 {
     [DbContext(typeof(SystemDatabase))]
-    partial class SystemDatabaseModelSnapshot : ModelSnapshot
+    [Migration("20261005234751_1_including-config-entities")]
+    partial class _1_includingconfigentities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
