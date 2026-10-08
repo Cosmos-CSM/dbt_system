@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>DBT_System</RootNamespace>
+    <PackageId>DBT.System</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Erick Ponciano</Authors>
+    <Company>Cosmos (CSM)</Company>
+    <RepositoryUrl>https://github.com/Cosmos-CSM/dbt_system</RepositoryUrl>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<PackageReadmeFile>CHANGELOG.md</PackageReadmeFile>
+	<IsPackable>true</IsPackable>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CSharp.Extension" Version="1.2.5" />
+    <PackageReference Include="CSM.Database.Core" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+	<None Include="CHANGELOG.md" Pack="true" PackagePath="" />
+    <None Update="csmsys.dev.connection.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
