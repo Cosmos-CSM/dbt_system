@@ -10,7 +10,7 @@ jobs:
 
     env:
       TEST_PROJECT_PATH: Integration Tests/
-      DB_CONTEXT_PROJECT_PATH: CSM System Database Core/
+      DB_CONTEXT_PROJECT_PATH: DBT System/
       SQL_SERVER_PASSWORD: "P@ssw0rd123!"
 
     services:
@@ -39,7 +39,7 @@ jobs:
             sleep 2
           done
 
-      - name: Create database "CSM System"
+      - name: Create database "DBT System"
         run: |
           dotnet new console -o createdb >/dev/null 2>&1
           cat << 'EOF' > createdb/Program.cs
@@ -74,7 +74,7 @@ jobs:
           cat << 'EOF' > dbconfig.json
           {
             "Host": "localhost",
-            "Name": "CSM System",
+            "Name": "DBT System",
             "User": "sa",
             "Password": "P@ssw0rd123!",
             "IntegratedSecurity": false,
