@@ -10,8 +10,8 @@ obj/
 
 ## IDE and Editor Artifacts
 .vscode/
-.vs/
-/.vs
+*.vs
+
 ## Test Output
 TestResult*/
 *.log
